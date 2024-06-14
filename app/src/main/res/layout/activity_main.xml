@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#B5DBFF">
+
+    <TextView
+        android:id="@+id/textViewAttention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATTENTION: "
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textViewMeditation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEDITATION: "
+        android:textSize="20sp"
+        android:layout_below="@id/textViewAttention"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewBlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLINK: "
+        android:textSize="20sp"
+        android:layout_below="@id/textViewMeditation"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewRawData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RAW DATA: "
+        android:textSize="20sp"
+        android:layout_below="@id/textViewBlink"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+
+
+
+    <TextView
+        android:id="@+id/textViewLowAlpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOW ALPHA: "
+        android:textSize="20sp"
+        android:layout_below="@id/textViewRawData"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewHighAlpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewLowAlpha"
+        android:layout_marginTop="29dp"
+        android:text="HIGHALPHA:"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewTheta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="THETA:"
+        android:layout_below="@id/textViewHighAlpha"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+
+
+
+
+    <TextView
+        android:id="@+id/textViewLowBeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOW BETA:"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_below="@id/textViewTheta"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"/>
+
+    <TextView
+        android:id="@+id/textViewHighBeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HIGH BETA:"
+        android:layout_below="@id/textViewLowBeta"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"/>
+
+    <TextView
+        android:id="@+id/textViewLowGamma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOW GAMMA:"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textViewHighBeta"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <TextView
+        android:id="@+id/textViewHighGamma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HIGH GAMMA:"
+        android:textSize="20sp"
+        android:layout_below="@id/textViewLowGamma"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"/>
+
+
+    <TextView
+        android:id="@+id/textViewDelta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELTA:"
+        android:textSize="20sp"
+        android:layout_below="@id/textViewHighGamma"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/buttonRecord"
+        android:layout_width="800dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/textViewHighGamma"
+        android:layout_marginTop="91dp"
+        android:backgroundTint="#111D5E"
+        android:text="Record"
+        android:textColor="#FFFF"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
