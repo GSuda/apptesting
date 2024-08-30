@@ -7,6 +7,17 @@
       </SelectionState>
       <SelectionState runConfigName="Login">
         <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-08-18T18:29:33.008175700Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=GYLFVGMZ857SSGNZ" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="State">
+        <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
   </component>

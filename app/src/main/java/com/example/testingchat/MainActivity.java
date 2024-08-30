@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         textViewAttention = findViewById(R.id.textViewAttention);
         textViewMeditation = findViewById(R.id.textViewMeditation);
         textViewBlink = findViewById(R.id.textViewBlink);
-        textViewRawData = findViewById(R.id.textViewRawData);
         textViewDelta = findViewById(R.id.textViewDelta);
         textViewTheta = findViewById(R.id.textViewTheta);
         textViewLowAlpha = findViewById(R.id.textViewLowAlpha);

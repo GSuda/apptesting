@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,9 +18,10 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login); // Ensure this is the correct layout file
 
-        EditText username = findViewById(R.id.username);
+        EditText username = findViewById(R.id.email);
         EditText password = findViewById(R.id.password);
-        MaterialButton loginbtn = findViewById(R.id.loginbtn);
+        Button loginbtn = findViewById(R.id.login_button);
+
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +32,7 @@ public class Login extends AppCompatActivity {
                     // correct
                     Toast.makeText(Login.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
                     // Navigate to MainActivity
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    Intent intent = new Intent(Login.this, HomePage.class);
                     startActivity(intent);
                     finish(); // Optional: close the login activity
                 } else {

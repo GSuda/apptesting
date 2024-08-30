@@ -1,171 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#B5DBFF">
+    android:background="@drawable/background3">
 
-    <TextView
-        android:id="@+id/textViewAttention"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ATTENTION: "
-        android:textSize="20sp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        />
+    <!-- Other existing views -->
 
-    <TextView
-        android:id="@+id/textViewMeditation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MEDITATION: "
-        android:textSize="20sp"
-        android:layout_below="@id/textViewAttention"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewBlink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BLINK: "
-        android:textSize="20sp"
-        android:layout_below="@id/textViewMeditation"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:src="@drawable/img_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewRawData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RAW DATA: "
-        android:textSize="20sp"
-        android:layout_below="@id/textViewBlink"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"/>
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="381dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_icon">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="EYE MOVEMENT"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="EYE STATE"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="RECORD"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewLowAlpha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOW ALPHA: "
-        android:textSize="20sp"
-        android:layout_below="@id/textViewRawData"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"/>
+    <!-- Blue Container with Bands -->
 
-    <TextView
-        android:id="@+id/textViewHighAlpha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewLowAlpha"
-        android:layout_marginTop="29dp"
-        android:text="HIGHALPHA:"
-        android:textSize="20sp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"/>
+    <!-- Record Button -->
 
-    <TextView
-        android:id="@+id/textViewTheta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="THETA:"
-        android:layout_below="@id/textViewHighAlpha"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"/>
+    <!-- Image Icon -->
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="315dp"
+        android:layout_height="450dp"
 
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#B5DBFF"
+        app:cardCornerRadius="50dp"
 
+        app:layout_constraintBottom_toTopOf="@id/buttonRecord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintVertical_bias="0.0">
 
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="450dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewLowBeta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOW BETA:"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:layout_below="@id/textViewTheta"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"/>
+            <!-- TextViews for Bands -->
+            <TextView
+                android:id="@+id/textViewAttention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="30dp"
+                android:text="Attention: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewHighBeta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HIGH BETA:"
-        android:layout_below="@id/textViewLowBeta"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"/>
+            <TextView
+                android:id="@+id/textViewMeditation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:text="Meditation: "
 
-    <TextView
-        android:id="@+id/textViewLowGamma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOW GAMMA:"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/textViewHighBeta"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"
-        />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewHighGamma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HIGH GAMMA:"
-        android:textSize="20sp"
-        android:layout_below="@id/textViewLowGamma"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"/>
+            <TextView
+                android:id="@+id/textViewBlink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Blink: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/textViewLowAlpha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Low Alpha: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewDelta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DELTA:"
-        android:textSize="20sp"
-        android:layout_below="@id/textViewHighGamma"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="sans-serif-medium"
-        android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/textViewHighAlpha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="High Alpha: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewLowBeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Low Beta: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHighBeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="High Beta: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewLowGamma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Low Gamma: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHighGamma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="High Gamma: "
+                android:textSize="20sp"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDelta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Delta: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewTheta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Theta: "
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <com.google.android.material.button.MaterialButton
-
         android:id="@+id/buttonRecord"
-        android:layout_width="800dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/textViewHighGamma"
-        android:layout_marginTop="91dp"
-        android:backgroundTint="#111D5E"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:backgroundTint="#B5DBFF"
         android:text="Record"
-        android:textColor="#FFFF"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:backgroundTint="#111D5E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952"
+        app:layout_constraintWidth_percent="0.8" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="163dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="580dp"
+        android:src="@drawable/img_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
